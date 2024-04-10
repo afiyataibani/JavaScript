@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range Calculator</title>
+</head>
+
+<body>
+    <h1>Range Calculator</h1>
+    <label for="number">Enter a number: </label><br>
+    <input type="number" id="number"><br><br>
+    <button onclick="checkRange()">Check Range</button>
+    <p id="result"></p>
+
+    <script>
+        function inRange(number, ranges) {
+            for (let i = 0; i < ranges.length; i++) {
+                let range = ranges[i]
+
+                if (number >= range[0] && number <= range[1]) {
+                    return true
+                }
+            }
+
+            return false
+        }
+
+        function checkRange() {
+            let number = parseInt(document.getElementById('number').value)
+            let ranges = [
+                [10, 20],
+                [20, 30],
+                [30, 40],
+            ];
+
+            let resultElement = document.getElementById('result');
+            if(inRange(number, ranges)){
+                resultElement.textContent = "Yes"
+            } else {
+                resultElement.textContent = "No"
+            }
+        }
+
+    </script>
+</body>
+
+</html>
