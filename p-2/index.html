@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="calculator">
+        <h1>Calculator Menu</h1>
+        <h2>1: Addition</h2>
+        <h2>2: Subtraction</h2>
+        <h2>3: Multiplication</h2>
+        <h2>4: Division</h2>
+        <h2>5: Comparision</h2>
+        <h2>6: Press 6 For Exiting</h2>
+        <label for="choice">Enter your choice:</label><br><br>
+        <input type="number" id="choice" min="1" max="6"><br><br>
+        <button onclick="calculate()">Submit</button><br><br>
+        <div id="output"></div>
+    </div>
+
+    <script>
+        function calculate() {
+            let choice = parseInt(document.getElementById("choice").value);
+            let outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = ""; 
+
+            switch (choice) {
+                case 1:
+                    addition();
+                    break;
+                case 2:
+                    subtraction();
+                    break;
+                case 3:
+                    multiplication();
+                    break;
+                case 4:
+                    division();
+                    break;
+                case 5:
+                    comparison();
+                    break;
+                case 6:
+                    outputDiv.textContent = "Exiting...";
+                    break;
+                default:
+                    outputDiv.textContent = "Invalid choice";
+                    break;
+            }
+        }
+
+        function addition() {
+            let num1 = parseFloat(prompt("Enter first number:"));
+            let num2 = parseFloat(prompt("Enter second number:"));
+            document.getElementById("output").textContent = "Result: " + (num1 + num2);
+        }
+
+        function subtraction() {
+            let num1 = parseFloat(prompt("Enter first number:"));
+            let num2 = parseFloat(prompt("Enter second number:"));
+            document.getElementById("output").textContent = "Result: " + (num1 - num2);
+        }
+
+        function multiplication() {
+            let num1 = parseFloat(prompt("Enter first number:"));
+            let num2 = parseFloat(prompt("Enter second number:"));
+            document.getElementById("output").textContent = "Result: " + (num1 * num2);
+        }
+
+        function division() {
+            let num1 = parseFloat(prompt("Enter first number:"));
+            let num2 = parseFloat(prompt("Enter second number:"));
+            let outputDiv = document.getElementById("output");
+            if (num2 !== 0) {
+                outputDiv.textContent = "Result: " + (num1 / num2);
+            } else {
+                outputDiv.textContent = "Error: Division by zero";
+            }
+        }
+
+        function comparison() {
+            let num1 = parseFloat(prompt("Enter first number:"));
+            let num2 = parseFloat(prompt("Enter second number:"));
+            let outputDiv = document.getElementById("output");
+
+            switch (true) {
+                case num1 > num2:
+                    outputDiv.textContent = num1 + " is greater than " + num2;
+                    break;
+                case num1 < num2:
+                    outputDiv.textContent = num1 + " is less than " + num2;
+                    break;
+                case num1 === num2:
+                    outputDiv.textContent = num1 + " is equal to " + num2;
+                    break;
+                default:
+                    outputDiv.textContent = "Invalid comparison";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
