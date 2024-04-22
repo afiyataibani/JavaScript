@@ -31,79 +31,85 @@
         </header>
 
         <div class="listProduct">
-            <div class="item">
+            <div class="item" data-name="Garlic Bread" data-price="8">
                 <img src="assets/images/garlic bread.jpg" alt="">
                 <h2>Garlic Bread</h2>
                 <div class="price">$8</div>
-                <button class="addCart">ADD TO CART</button>
+                <button class="addCart" onclick="addToCart('Garlic Bread')">ADD TO CART</button>
             </div>
-            <div class="item">
+            <div class="item" data-name="Pizza" data-price="10">
                 <img src="assets/images/pizza.jpg" alt="">
                 <h2>Pizza</h2>
                 <div class="price">$10</div>
-                <button class="addCart">ADD TO CART</button>
+                <button class="addCart" onclick="addToCart('Pizza')">ADD TO CART</button>
             </div>
-            <div class="item">
+            <div class="item" data-name="Hot Dog" data-price="9">
                 <img src="assets/images/hotdog.jpg" alt="">
                 <h2>Hot Dog</h2>
                 <div class="price">$9</div>
-                <button class="addCart">ADD TO CART</button>
+                <button class="addCart" onclick="addToCart('Hot Dog')">ADD TO CART</button>
             </div>
-            <div class="item">
+            <div class="item" data-name="Pasta" data-price="10">
                 <img src="assets/images/pasta.jpg" alt="">
                 <h2>Pasta</h2>
                 <div class="price">$10</div>
-                <button class="addCart">ADD TO CART</button>
+                <button class="addCart" onclick="addToCart('Pasta')">ADD TO CART</button>
             </div>
-            <div class="item">
+            <div class="item" data-name="French Fries" data-price="8">
                 <img src="assets/images/fries.jpg" alt="">
                 <h2>French Fries</h2>
                 <div class="price">$8</div>
-                <button class="addCart">ADD TO CART</button>
+                <button class="addCart" onclick="addToCart('French Fries')">ADD TO CART</button>
             </div>
-            <div class="item">
+            <div class="item" data-name="Taco" data-price="10">
                 <img src="assets/images/taco.jpg" alt="">
                 <h2>Taco</h2>
                 <div class="price">$10</div>
-                <button class="addCart">ADD TO CART</button>
+                <button class="addCart" onclick="addToCart('Taco')">ADD TO CART</button>
             </div>
-            <div class="item">
+            <div class="item" data-name="Noodles" data-price="8">
                 <img src="assets/images/noodles.jpg" alt="">
                 <h2>Noodles</h2>
                 <div class="price">$8</div>
-                <button class="addCart">ADD TO CART</button>
+                <button class="addCart" onclick="addToCart('Noodles')">ADD TO CART</button>
             </div>
-            <div class="item">
+            <div class="item" data-name="Burger" data-price="10">
                 <img src="assets/images/burger.jpg" alt="">
                 <h2>Burger</h2>
                 <div class="price">$10</div>
-                <button class="addCart">ADD TO CART</button>
+                <button class="addCart" onclick="addToCart('Burger')">ADD TO CART</button>
             </div>
-            <div class="item">
+            <div class="item" data-name="Coke" data-price="6">
                 <img src="assets/images/coke.jpg" alt="">
                 <h2>Coke</h2>
                 <div class="price">$6</div>
-                <button class="addCart">ADD TO CART</button>
+                <button class="addCart" onclick="addToCart('Coke')">ADD TO CART</button>
             </div>
-            <div class="item">
+            <div class="item" data-name="Pancakes" data-price="5">
                 <img src="assets/images/pancake.jpg" alt="">
                 <h2>Pancakes</h2>
                 <div class="price">$5</div>
-                <button class="addCart">ADD TO CART</button>
+                <button class="addCart" onclick="addToCart('Pancakes')">ADD TO CART</button>
             </div>
-            <div class="item">
+            <div class="item" data-name="Cold Coffee" data-price="8">
                 <img src="assets/images/coffee.jpg" alt="">
                 <h2>Cold Coffee</h2>
                 <div class="price">$8</div>
-                <button class="addCart">ADD TO CART</button>
+                <button class="addCart" onclick="addToCart('Cold Coffee')">ADD TO CART</button>
             </div>
-            <div class="item">
+            <div class="item" data-name="Waffle" data-price="8">
                 <img src="assets/images/waffle.jpg" alt="">
-                <h2>waffle</h2>
+                <h2>Waffle</h2>
                 <div class="price">$8</div>
-                <button class="addCart">ADD TO CART</button>
+                <button class="addCart" onclick="addToCart('Waffle')">ADD TO CART</button>
             </div>
         </div>
+        <br>
+        <div id="cart">
+            <h2>Cart</h2>
+            <ul id="cart-items"></ul>
+            <p>Total: $<span id="total">0</span></p>
+          </div>
     </div>
 
     <div class="cartTab">

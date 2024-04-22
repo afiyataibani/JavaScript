@@ -178,3 +178,8 @@ header .icon-cart span {
 .listCart::-webkit-scrollbar {
   width: 0;
 }
+
+#cart-items{
+  list-style: none;
+}
+
