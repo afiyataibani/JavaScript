@@ -49,6 +49,30 @@
         }
 
         countDown(10)
+
+        // Exponents
+        function power(base, exponent) {
+            if (exponent === 0) {
+                return 1
+            }
+
+            return base * power(base, exponent - 1)
+        }
+
+        console.log(power(2, 3))
+        console.log(power(2, 2))
+
+        // Print Numbers
+        function printNumbers(n){
+            if (n === 0){
+                return
+            }
+
+            printNumbers(n - 1)
+            console.log(n)
+        }
+
+        printNumbers(5)
     </script>
 </body>
 
