@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-image: url("./img/2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(10px);
+  font-family: "Didact Gothic", sans-serif;
+}
+
+.form {
+  background: rgba(177, 216, 255, 0.337);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.7),
+    -10px -10px 20px rgba(255, 255, 255, 0.1) !important;
+}
+
+input.form-control {
+  border: 1px solid #ffffff !important;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.5),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+  transition: box-shadow 0.5s linear !important;
+}
+
+input.form-control:hover {
+  box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5) !important;
+}
+
+button.btn {
+  border-radius: 5px !important;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5),
+    -5px -5px 10px rgba(255, 255, 255, 0.1);
+}

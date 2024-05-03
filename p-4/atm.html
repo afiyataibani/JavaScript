@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Login</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="main.css">
+
+
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <div class="container d-flex justify-content-between align-items-center p-4">
+            <div>
+                <button class="btn btn-outline-light  me-3 fs-5 active" type="button">MY BALANCE</button>
+                <button class="btn btn-outline-light me-3 fs-5" type="button" onclick="deposit()">DEPOSIT</button>
+                <button class="btn btn-outline-light me-3 fs-5" type="button" onclick="withdraw()">WITHDRAW</button>
+            </div>
+
+            <div>
+                <button class="btn btn-danger me-3 fs-5" type="button" onclick="logout()">LOGOUT</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container vh-100 d-flex align-items-center justify-content-center ">
+        <div class="text-container">
+            <h1 class="text-white m-0 ms-5" id="user"></h1>
+            <div class="p-4 text-white mt-5">
+                <div class="d-flex flex-wrap">
+                    <div id="balance" class="m-0 me-5 rounded-5 p-5 d-inline">
+                        <p class="fs-2 fw-bold">Current Balance:</p>
+                        <p class="fs-2 fw-bold text-center" id="current-balance"></p>
+                    </div>
+                    <div id="deposit" class="m-0 me-5 d-inline rounded-5 p-5">
+                        <p class="fs-2 fw-bold">Deposits:</p>
+                        <p class="fs-2 fw-bold text-center" id="deposited-amount">$0</p>
+                    </div>
+                    <div id="withdraw" class="m-0 d-inline rounded-5 p-5">
+                        <p class="fs-2 fw-bold">Withdrawals:</p>
+                        <p class="fs-2 fw-bold text-center" id="withdrawal-amount">$0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
