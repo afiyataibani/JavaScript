@@ -75,7 +75,6 @@ button {
   cursor: pointer;
   font-size: 20px;
   background-color:lightslategrey;
-  /* color: black; */
 }
 
 button:hover {
