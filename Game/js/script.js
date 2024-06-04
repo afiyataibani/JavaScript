@@ -1,5 +1,5 @@
-let move_speed = 2.7,
-  gravity = 0.4;
+let move_speed = 2.5,
+  gravity = 0.3;
 let bird = document.querySelector(".bird");
 let img = document.getElementById("bird-1");
 let sound_point = new Audio("../sound/point.mp3");
