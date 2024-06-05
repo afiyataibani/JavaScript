@@ -138,5 +138,5 @@ function play() {
     } else {
       clearInterval(pipe_creation_interval);
     }
-  }, 1300); // Adjust the interval as needed
+  }, 1300); 
 }
