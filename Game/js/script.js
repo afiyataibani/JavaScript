@@ -20,7 +20,7 @@ message.classList.add("messageStyle");
 
 // Play Screen
 document.addEventListener("keydown", (e) => {
-  if (e.key == "Enter" && game_state != "Play") {
+  if (e.key == "Enter" || e.key == " " && game_state != "Play") {
     document.querySelectorAll(".pipe_sprite").forEach((e) => {
       e.remove();
     });
@@ -138,5 +138,5 @@ function play() {
     } else {
       clearInterval(pipe_creation_interval);
     }
-  }, 1300); // Adjust the interval as needed
+  }, 1300); 
 }
