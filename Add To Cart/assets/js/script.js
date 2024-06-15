@@ -2,50 +2,50 @@
 const products = [
   {
     id: 1,
-    name: "Cheese Cake",
-    price: "200",
+    name: "Burger",
+    price: "12",
     image: ".\\assets\\images\\1.jpg",
   },
   {
     id: 2,
-    name: "Cup Cake",
-    price: "80",
+    name: "Cold-Coffee",
+    price: "10",
     image: ".\\assets\\images\\2.jpg",
   },
   {
     id: 3,
-    name: "Brownie",
-    price: "90",
+    name: "Coke",
+    price: "8",
     image: ".\\assets\\images\\3.jpg",
   },
   {
     id: 4,
-    name: "Cream Roll",
-    price: "60",
+    name: "Fries",
+    price: "10",
     image: ".\\assets\\images\\4.jpg",
   },
   {
     id: 5,
-    name: "Puff Pastry",
-    price: "95",
+    name: "Garlic Bread",
+    price: "9",
     image: ".\\assets\\images\\5.jpg",
   },
   {
     id: 6,
-    name: "Milk Chocolate",
-    price: "20",
+    name: "Hot-Dog",
+    price: "10",
     image: ".\\assets\\images\\6.jpg",
   },
   {
     id: 7,
-    name: "Brownie with icecream",
-    price: "130",
+    name: "Noodles",
+    price: "9",
     image: ".\\assets\\images\\7.jpg",
   },
   {
     id: 8,
-    name: "Candy",
-    price: "30",
+    name: "Pancake",
+    price: "7",
     image: ".\\assets\\images\\8.jpg",
   },
 ];
@@ -63,8 +63,8 @@ if (document.getElementById("products")) {
     productElement.innerHTML = `<div class="card">
           <img src="${product.image}" class="card-img-top" alt="${product.name}">
           <div class="card-body">
-              <h5 class="card-title">${product.name}</h5>
-              <p class="card-text">$${product.price}</p>
+              <h5 class="card-title fw-medium fs-4">${product.name}</h5>
+              <p class="card-text fw-semibold fs-5">$${product.price}</p>
               <button class="btn btn-dark" onclick="addToCart(${product.id})">Add to Cart</button>
           </div>
       </div>`;
@@ -103,7 +103,6 @@ function updateCart() {
       const cartItem = document.createElement("li");
       cartItem.className =
         "list-group-item d-flex justify-content-between align-items-center";
-      // cartItem.style.backgroundColor = "#ff6d292b";
       cartItem.innerHTML = `<div class="cart-item-details">
               <img src="${product.image}" alt="${product.name}" class="img-thumbnail mr-3" style="width: 100px;">
               <span class="fw-bolder ms-2 fs-5">${product.name} - $${product.price} x ${product.quantity}</span>
