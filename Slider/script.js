@@ -49,7 +49,7 @@ document.querySelector(".slider").addEventListener("mouseenter", () => {
 });
 
 document.querySelector(".slider").addEventListener("mouseleave", () => {
-  autoplayInterval = setInterval(autoplay, 3000);
+  autoplayInterval = setInterval(autoplay, 2000);
 });
 
 showSlide(index);
