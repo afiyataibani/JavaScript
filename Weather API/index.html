@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Fetch Example</title>
+</head>
+<body>
+    <h1>Weather Fetch Example</h1>
+    <div id="weather"></div>
+
+    <script>
+        // Your API key (replace with your actual API key)
+        const apiKey = 'YOUR_API_KEY_HERE';
+
+        // The city for which to get the weather data
+        const city = 'London';
+
+        // The URL to fetch the weather data
+        const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+        // Fetch weather data
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+
+                // Display weather data in the HTML
+                const weatherDiv = document.getElementById('weather');
+                weatherDiv.innerHTML = `
+                    <p>City: ${data.name}</p>
+                    <p>Temperature: ${data.main.temp} °C</p>
+                    <p>Weather: ${data.weather[0].description}</p>
+                `;
+            })
+            .catch(error => {
+                console.error('Error fetching weather data:', error);
+            });
+    </script>
+</body>
+</html>
