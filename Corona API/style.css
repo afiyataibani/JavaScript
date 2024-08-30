@@ -1,0 +1,117 @@
+body {
+    text-align: center;
+    align-items: center;
+    background: #e9f5f2; /* Light, mint green background */
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.btn {
+    margin-top: 15px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 32px;
+    background: #7baaf7; /* Soft blue for button */
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    color: white;
+    margin-left: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.btn:hover {
+    background: #99c2f8;
+}
+
+input {
+    padding: 15px 40px;
+    border-radius: 50px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.15), inset -5px -5px 10px rgba(255, 255, 255, 0.9);
+}
+
+.container {
+    width: 1320px;
+    margin: auto;
+    padding: 30px 60px;
+    margin-top: 80px;
+    border-radius: 32px;
+    background: #f5f5fa; /* Light, soft lavender background for container */
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1), -10px -10px 30px rgba(255, 255, 255, 0.7);
+}
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 20px;
+}
+
+#container > div {
+    width: 80%;
+    height: 170px;
+    padding: 12px;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+#container > div:hover {
+    transform: scale(1.05);
+}
+
+.activeCasesDiv {
+    background-color: #c3e6cb; /* Light green */
+    color: #155724;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.newCasesDiv {
+    background-color: #fce8b2; /* Light yellow */
+    color: #856404;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.recoveredCasesDiv {
+    background-color: #d4edda; /* Pale green */
+    color: #155724;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.totalCasesDiv {
+    background-color: #cce5ff; /* Light blue */
+    color: #004085;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.totalDeathsDiv {
+    background-color: #f8d7da; /* Light red/pink */
+    color: #721c24;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+.totalTestsDiv {
+    background-color: #e2e3e5; /* Light gray */
+    color: #383d41;
+    font-size: 1.2rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+}
+
+h3 {
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 1rem;
+}
